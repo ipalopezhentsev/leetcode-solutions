@@ -8,7 +8,7 @@ package leetcode.solutions;
  */
 public class MergeTwoSortedList {
     public ListNode<Integer> mergeTwoLists(ListNode<Integer> list1, ListNode<Integer> list2) {
-        ListNode<Integer> dummy = new ListNode<Integer>(); //simplifies bootstrap!
+        ListNode<Integer> dummy = new ListNode<>(); //simplifies bootstrap!
         ListNode<Integer> curHead = dummy;
         while (list1 != null || list2 != null) {
             if (list1 == null) {
