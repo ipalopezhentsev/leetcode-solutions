@@ -1,4 +1,4 @@
-package leetcode.solutions;
+package yandex;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
