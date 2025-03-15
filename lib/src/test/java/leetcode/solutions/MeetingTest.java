@@ -62,4 +62,25 @@ public class MeetingTest {
         var m2 = new Meeting(LocalTime.of(1,0), LocalTime.of(6,0));
         assertTrue(m1.overlaps(m2));
     }
+
+    @Test
+    void testCommonStartIsOverlapping() {
+        var m1 = new Meeting(LocalTime.of(2,0), LocalTime.of(5,0));
+        var m2 = new Meeting(LocalTime.of(2,0), LocalTime.of(3,0));
+        assertTrue(m1.overlaps(m2));
+    }
+
+    @Test
+    void testCommonEndIsOverlapping() {
+        var m1 = new Meeting(LocalTime.of(2,0), LocalTime.of(5,0));
+        var m2 = new Meeting(LocalTime.of(1,0), LocalTime.of(5,0));
+        assertTrue(m1.overlaps(m2));
+    }
+
+    @Test
+    void testAdjacentIsNotOverllapping() {
+        var m1 = new Meeting(LocalTime.of(2,0), LocalTime.of(5,0));
+        var m2 = new Meeting(LocalTime.of(1,0), LocalTime.of(2,0));
+        assertFalse(m1.overlaps(m2));
+    }
 }

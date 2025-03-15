@@ -95,5 +95,4 @@ public class MeetingRoomReservationTest {
         assertTrue(result.contains(meeting2));
         assertTrue(result.contains(meeting3));
     }
-
 }
